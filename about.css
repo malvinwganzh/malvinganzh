@@ -421,8 +421,7 @@ footer > .copyright{
 
 @media (max-width:500px) {
     header{
-        font-size: .5rem;
-
+        font-size: .6rem;
         padding: 0;
         height: 10%;
         width: 100%;
@@ -435,6 +434,7 @@ footer > .copyright{
     }
     .left> .top> .gan{
         transform: translateX(0px);
+        animation: upDown 1000ms;
     }
     .contacts{
         font-size: .6em;
