@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&display=swap');
+/*
+font-family: 'Playfair Display', serif; (playfair display)
+font-family: 'Poppins', sans-serif;
+font-family: 'Frank Ruhl Libre', serif;
+*/
+
+
+
+*{
+    margin: 0;
+}
+a:link,a:visited{
+    color: black;
+    text-decoration: none;
+}
+
+body{
+    height: 100%;
+    overflow: hidden;
+
+}
+.main{
+    display: flex;
+    width: 100%;
+}
+.main > .left{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 65%;
+    height: 100vh;
+    font-size: 1rem;
+}
+.main > .left > .bg{
+    position: absolute;
+    max-width: 750px;
+    max-height: 750px;
+    opacity: .1;
+    z-index:-2;
+    top: 3px;
+    animation:exist 2000ms;
+}
+.nameType{
+    max-width: 447px;
+    max-height: 700px;
+    animation :upDown 1000ms;
+}
+.main > .right{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    height: 100vh;
+    overflow: hidden;
+}
+.main>.right>.circleRight>.profPic{
+    width: 150%;
+    max-height: auto ;
+    border-radius: 50%;
+    padding: 10px;
+}
+.main >.left >.text{
+    height: 200px;
+    width: 200px;
+    margin-left: -60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main >.left >.text { 
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 400;
+    animation :upDown 1000ms;
+    
+}
+.main >.left >.text> ul{
+    margin-left: -40px;
+    list-style: none;   
+
+}
+.main >.left >.text> ul>li{
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.5s;   
+}
+
+.main >.left >.text> ul>li>a:hover::before{
+content: "-";
+}
+
+.main >.left >.text> ul>li>a:hover::after{
+    content: "-";    
+}
+
+.profPic{
+    animation: left-to-Right 1000ms;
+}
+
+
+
+@media (max-width:600px){
+    body{
+        height: 100vh;
+    }
+
+    .main{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .main > .left{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        font-size: 1rem;
+
+
+    }
+    .main > .right{
+        width: 100%;
+        height: 0vh;
+        overflow: hidden;
+        scale: 0;
+    }
+    .main>.right>.circleRight>.profPic{
+        width: 20%;
+        height: auto ;
+        border-radius: 50%;
+      }
+      .main > .left > .bg{
+        width: 90%;
+        height: auto;
+        opacity: .1;
+        z-index:-2;
+        animation:exist 4000ms;
+        position: absolute;
+ 
+    }
+
+}
+
+
+
+
+
+@keyframes left-to-Right{
+    0%{
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+
+    }
+}
+
+@keyframes upDown{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    
+   
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes exist{
+    0%{
+
+        opacity: 0;
+    }
+    
+   
+    100%{
+        opacity: .1;
+    }
+}
+
+
+
